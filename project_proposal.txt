@@ -1,0 +1,10 @@
+Nikhil Ferris
+CIS 192
+Project Proposal
+April 1, 2013
+
+General Idea: Build a web scraper for Stanford housing website that sends email alerts when new properties become available.
+
+Specific Goals: Make a web scraper that sends email updates every desired time interval when properties that match certain criteria become available.
+
+Packages to use: -scrapy

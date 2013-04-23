@@ -1,0 +1,29 @@
+Requirements
+
+Nikhil Ferris
+CIS 192 Final Project
+
+Modules used:
+1) scrapy
+
+Description: This project crawls supost.com, a website similar to craigslist but designed for Stanford students, and sends an email per new housing listing to a desired address each time the program is run.
+
+The first time the program is run, if it does not exist, a new .txt file is created to hold all the current links that are available on the site. It then populates the .txt file so as to prevent repeat links from being emailed when the program is run. 
+
+No emails are sent on the first run. On each subsequent run, one email is sent per new listing. 
+
+How to Run (on a mac):
+1) set current directory to "spiders"
+2) type "scrapy crawl supost" in terminal
+	- this first creates a file called "links.txt" and populates it with existing links
+	- NOTE: I have included a links.txt file so that the tester does not have to wait for new links to be posted on the website. You can, however, delete links.txt and rerun to test if the program creates a new file.
+3) wait for a period of time (I've found an hour or two is sufficient), and again type "scrapy crawl supost"
+	- I set up a new gmail address to receive these emails (supostreceiver@gmail.com, password: turntable). Feel free to check it to make sure emails are sending correctly
+
+List of files:
+1) all scrapy files
+	-items.py
+	-pipelines.py
+	-settings.py
+2) su_spider.py (user created)
+3) links.txt (is not present at first; it is created after first run)
